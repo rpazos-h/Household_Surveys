@@ -1,0 +1,54 @@
+﻿Código;Desc_esp;Desc_eng
+0;Funcionarios del poder ejecutivo;Executive officials
+1;Funcionarios del poder legislativo;Legislative officials
+2;Funcionarios del poder judicial;Judiciary officials
+3;Directivos organismos, empresas y estado;Agencies, firms and state managers
+4;Directivos instituciones sociales;Social institution managers
+5;Directivos empresas pequeñas;Small firm managers
+6;Directivos empresas medianas;Medium firm managers
+7;Directivos empresas grandes;Big firm managers
+10;Ocupaciones de la gestión adm., planificación y control de gestión;Administrative management, planification and management control occupations
+11;Ocupaciones de la gestión jurídico-legal;Judiciary-legal management occupations
+20;Ocupaciones de la gestión presupuestaria, contable y financiera;Budgetary, accounting and finance management occupations
+30;Ocupaciones de la comercialización directa;Direct commercialization occupations
+31;Ocupaciones de la venta domiciliaria, viajantes y promotores;Home sales, travelers and promoters occupations
+32;Ocupaciones de la comercialización indirecta;Indirect commercialization occupations
+33;Ocupaciones de comercialización ambulante;Walking commercialization occupations 
+34;Ocupaciones del transporte;Transport occupations
+35;Ocupaciones de las telecomunicaciones;Telecommunication occupations
+36;Ocupaciones del almacenaje de insumos;Storage of supplies occupations
+40;Ocupaciones de la salud y sanidad;Health and sanity occupations
+41;Ocupaciones de la educación;Education occupations
+42;Ocupaciones de la investigación;Investigation occupations
+43;Ocupaciones de la asesoría y consultoría;Consulting occupations
+44;Ocupaciones de la prevención de siniestros;Claims prevention occupations
+45;Ocupaciones de la comunicación de masas;Mass communication occupations
+46;Ocupaciones de los servicios sociales;Social services occupations
+47;Ocupaciones de los servicios de vigilancia;Surveillance services occupations
+48;Ocupaciones de servicios policiales;Police services occupations
+49;Ocupaciones de la FFAA;Armed forces occupations
+50;Ocupaciones del arte;Art occupations
+51;Ocupaciones del deporte;Sport occupations
+52;Ocupaciones de servicios de recreación;Recreative services occupations
+53;Ocupaciones de servicios gastronómicos;Gastronomic services occupations
+54;Ocupaciones de los servicios de alojamiento y turismo;Accomodation and tourism services occupations
+55;Ocupaciones de los servicios domésticos;Domestic services occupations
+56;Ocupaciones de servicios de limpieza no domésticos;Non-domestic cleaning services occupations
+57;Ocupaciones del cuidado y la atención de personas;Human care and assistance occupations
+58;Ocupaciones de los servicios sociales varios;Various social services occupations
+60;Ocupaciones de la producción agrícola;Agricultural production occupations
+61;Ocupaciones de la productividad ganadera;Livestock production occupations
+62;Ocupaciones de la producción forestal;Forestal production occupations
+63;Ocupaciones de la producción apícola, avícola;Bee and poultry production occupations
+64;Ocupaciones de la producción pesquera;Fishing production occupations
+65;Ocupaciones de la caza;Hunting occupations
+70;Ocupaciones de la producción extractiva;Extractive production occupations
+71;Ocupaciones de la producción de energía, gas y agua;Energy, gas and water production occupations
+72;Ocupaciones de la construcción;Construction occupations
+80;Ocupaciones de la producción industrial y artesanal;Industrial and craft production occupations
+81;Ocupaciones de la producción de software;Software production occupations
+82;Ocupaciones de la reparación de bienes de consumo;Consumption goods rapair occupations
+90;Ocupaciones de la instalación y mantenimiento de maquinaria de bienes;Machinery instalation and maintenance occupations
+91;Ocupaciones de desarrollo tecnológico productivo;Productive technological development occupations  
+92;Ocupaciones de la instalación y mantenimiento de maquinaria de servicios;Installation and maintenance of service machinery occupations
+;;
