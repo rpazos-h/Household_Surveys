@@ -65,7 +65,7 @@ CAES_nuevo;CAES_viejo_4d;CAES_viejo_2d;CAES_viejo_letra;Observaciones
 3602;3602_nuevo;41;E;
 3604;3604_nuevo;41;E;
 3700;9000;90;O;
-3800;9000;90;O;También corresponde a 3700 (mayoritariamente a 9000)
+3800;9000;90;O;TambiÃ©n corresponde a 3700 (mayoritariamente a 9000)
 3900;9000;90;O;
 4000;4500;45;F;
 4500;4500_nuevo;50;G;
@@ -104,7 +104,7 @@ CAES_nuevo;CAES_viejo_4d;CAES_viejo_2d;CAES_viejo_letra;Observaciones
 5601;5503;55;H;
 5602;5502;55;H;
 5800;2200;22;D;
-5900;9201;92;O;También corresponde a 2200 (mayoritariamente a 9201)
+5900;9201;92;O;TambiÃ©n corresponde a 2200 (mayoritariamente a 9201)
 6000;9201;92;O;
 6100;6402;64;I;
 6200;7201;72;K;
