@@ -55,7 +55,7 @@ getEPHS <- function(years=c(2003:2013),
   
   ephsDisponibles[,nickname:= paste0('t',trim,substr(year,3,4))]
   
-  if(is.null(dir)) stop('Hay que indicar un directorio donde desean guardarse los archivos')
+  if(is.null(dir)) stop('Hay que indicar un directorio donde guardar los archivos')
   if(dir.exists(dir)) {
     if(ind) {
       archivos <-list.files(dir,
