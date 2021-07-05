@@ -65,7 +65,7 @@ CAES_nuevo;CAES_viejo_4d;CAES_viejo_2d;CAES_viejo_letra;Observaciones
 3602;3602_nuevo;41;E;
 3604;3604_nuevo;41;E;
 3700;9000;90;O;
-3800;9000;90;O;También corresponde a 3700 (mayoritariamente a 9000)
+3800;9000;90;O;También correspond a 3700 (mayoritariamente a 9000)
 3900;9000;90;O;
 4000;4500;45;F;
 4500;4500_nuevo;50;G;
