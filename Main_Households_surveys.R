@@ -1,7 +1,7 @@
 # RESUME
 
-# This script uses household's survey data to analyse job-transitions, 
-# It anlyses how probable is for one employee moving from one occupation (industry) to another one
+# This script uses household's survey data to analyze job-transitions, 
+# It studies how probable is for one employee moving from one occupation (industry) to another one
 # in terms of its current occupation
 
 # Similarity of skills and the concept of industrial space (Neffke et al 2017) in terms of labor mobility
@@ -45,7 +45,7 @@ clasificadorCAES <- fread("https://raw.githubusercontent.com/rpazos-h/Household_
 
 cno <- fread('https://raw.githubusercontent.com/rpazos-h/Household_Surveys/main/Code_NO_Trans.csv',
              encoding = 'UTF-8') %>% 
-  mutate(C骴igo = ifelse(nchar(C骴igo)==1,paste0('0',C骴igo),C骴igo))
+  mutate(C贸digo = ifelse(nchar(C贸digo)==1,paste0('0',C贸digo),C贸digo))
 
   
 clasificacionACT <- fread('https://raw.githubusercontent.com/rpazos-h/Household_Surveys/main/Clas_2d.txt',
@@ -164,7 +164,7 @@ datos <- datos %>%
 
 datos <- rbind(datos, saltosInactividad, fill=TRUE)
 
-datosOcupaciones <- datos[datos$PP04D_COD %in% cno$C骴igo & datos$OCUP_LAG %in% cno$C骴igo,]
+datosOcupaciones <- datos[datos$PP04D_COD %in% cno$C贸digo & datos$OCUP_LAG %in% cno$C贸digo,]
 
 
 #### PLOT TRANSITIONS: IN-OUT FLOWS by occupation ####
@@ -177,18 +177,18 @@ propLlegadas <- data.table(Sector= colnames(matrizTransicionesOcupaciones),
                            Valor=apply(matrizTransicionesOcupaciones,2,sum)/sum(matrizTransicionesOcupaciones))
 
 cno<-cno %>% 
-  mutate(IDDouble = as.double(C骴igo))
+  mutate(IDDouble = as.double(C贸digo))
 
 SalidasLlegadasSector <- propSalidas[propLlegadas,on=c('Sector'),valor2:=i.Valor] %>% 
   select(Sector, 'PropSalida' = Valor, 'PropLlegada' = valor2) %>% 
   mutate(Sector = as.double(Sector)) %>% 
   .[as.data.table(cno),on=c('Sector'='IDDouble'),cnoIng:=Desc_eng] %>% 
-  mutate(Agrupaci髇 = ifelse(PropSalida>0.03,cnoIng,NA))
+  mutate(Agrupaci贸n = ifelse(PropSalida>0.03,cnoIng,NA))
 
 salidaEntradaPlot <- ggplot(SalidasLlegadasSector, aes(x=PropSalida, y=PropLlegada)) +
   geom_point() +
   geom_abline(slope = 1) +
-  geom_text_repel(aes(label=Agrupaci髇),force = 4, size=5) +
+  geom_text_repel(aes(label=Agrupaci贸n),force = 4, size=5) +
   theme_fivethirtyeight() +
   scale_x_continuous(labels=scales::percent_format(accuracy = 1)) +
   scale_y_continuous(labels=scales::percent_format(accuracy = 1)) +
@@ -291,7 +291,7 @@ cno <- cno %>%
 
 g_mst <- g_mst %>%
   activate(nodes) %>%
-  dplyr::left_join(cno[,c('C骴igo','Agrupacion')],by=c('name'='C骴igo'))
+  dplyr::left_join(cno[,c('C贸digo','Agrupacion')],by=c('name'='C贸digo'))
 g_mst <- g_mst %>%
   activate(nodes) %>%
   dplyr::mutate(Agrupacion=as.factor(Agrupacion))
@@ -311,7 +311,7 @@ g_mst <- g_mst %>%
   activate(nodes) %>%
   dplyr::mutate(transporte=ifelse(Agrupacion=='Transporte y telecomunicaciones',1,0),
                 Comercio=ifelse(Agrupacion=='Comercio',1,0),
-                Gestion=ifelse(Agrupacion=='Gesti髇',1,0),
+                Gestion=ifelse(Agrupacion=='Gesti贸n',1,0),
                 Primario=ifelse(Agrupacion=='Ocupaciones del sector primario',1,0),
                 Directivos=ifelse(Agrupacion=='Directores',1,0),
                 Agrupacion=gsub(x=Agrupacion,pattern = '* occupations*',replacement = ''))
@@ -356,7 +356,7 @@ strengthPlot
 
 # Tidy #2: Education redef
 
-listaEducacion <- list("Sin instrucci髇",'Sin instrucci髇','Primaria Completa','Secundaria Incompleta','Secundaria Completa','Superior Incompleta','Superior Completa')
+listaEducacion <- list("Sin instrucci贸n",'Sin instrucci贸n','Primaria Completa','Secundaria Incompleta','Secundaria Completa','Superior Incompleta','Superior Completa')
 names(listaEducacion) <- c(1,7,2,3,4,5,6)
 datos <- datos[,NIVEL_ED:=dplyr::recode(NIVEL_ED,!!!listaEducacion)]
 datos <- datos[flujosOcupaciones,
@@ -372,7 +372,7 @@ datos<-datos %>%
          IDTRIM = paste(ANO4,TRIMESTRE,sep='-'),
          IDTRIM = factor(IDTRIM))
 
-datos <- datos[,NEW_NIVEL_ED:=forcats::fct_relevel(NIVEL_ED,"Sin instrucci髇")]
+datos <- datos[,NEW_NIVEL_ED:=forcats::fct_relevel(NIVEL_ED,"Sin instrucci贸n")]
 
 
 datos <- data.table(datos) %>%
